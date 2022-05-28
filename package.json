@@ -1,0 +1,30 @@
+{
+  "name": "apollo-federation",
+  "version": "0.0.1",
+  "description": "practice with apollo federation",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently -k npm:server:*",
+    "server:gateway": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/gateway.ts",
+    "server:user": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/user.ts",
+    "server:tweet": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/tweet.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mint-nguyen/apollo-federation.git"
+  },
+  "keywords": [
+    "apollo",
+    "federation"
+  ],
+  "author": "Mint",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/mint-nguyen/apollo-federation/issues"
+  },
+  "homepage": "https://github.com/mint-nguyen/apollo-federation#readme",
+  "dependencies": {
+    "@apollo/gateway": "^0.50.0",
+    "apollo-server": "^3.6.7"
+  }
+}
